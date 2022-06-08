@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n =[];
+        for(let i =0; i<10; i++){
+            n[i] = Math.floor(Math.random()*10); //난수를 만들 수 있는 Math.random을 사용 범위는 10까지, random은 실수 난수를 만들기 때문에 정수만 빼오기 위해 Math.floor를 사용함.
+            //for문을 돌려 만들어진 10개의 배열 안에 난수를 넣어줌.
+                                                 
+        }
+        //for(i =0; i<10; i++){ //n을 출력하기 위해 for문을 돌려 n의 배열[0]~[9]까지 출력함.
+        //document.write(n[i] +" ");
+        //}
+        document.write(n);
+
+        document.write("<br>");
+        let big = n[0]; //값을 비교하기 위해 초기값 big을 설정함. 제일 앞에 있는 n[0]을 big에 넣어줌
+        for(i=0; i<10; i++){ 
+            if(big < n[i]) //big이 n[1]보다 작을 시 big에 n[1]을 넣어줌 big이 n[1]보다 클 시 big은 그대로.이걸  for 문을 이용해서 n[0]~n[10] 까지 계속 비교해줌
+                big=n[i];
+        }
+        document.write("제일 큰 수는" +big);
+        document.write("<hr>");
+
+        let m= n.sort() //배열 안의 값들을 정렬해주는 명령어. 정렬받은 배열들을 m에 넣어줌
+        for(i =0; i<10; i++){
+            document.write(m[i]+" ");  //m의 값을 for문을 활용하여 m[0]~m[9]까지 출력.
+        }
+        
+        
+    </script>
+</body>
+</html>
