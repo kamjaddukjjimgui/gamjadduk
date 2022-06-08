@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function kkk(){
+            let obj = document.getElementById("BB");
+            let aa=prompt("라면을 끓이는 순서를 입력하라.");
+            let newobj = document.createElement("li");
+            newobj.innerHTML=aa;
+            obj.appendChild(newobj);
+        }
+    </script>
+</head>
+<body>
+    <h3>라면을 끓이는 순서</h3>
+    <hr>
+    <ol type="A" id="BB" style="background-color: yellowgreen;">
+        <li  onclick="kkk()">물을 끓인다.</li>
+    </ol>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a =[]; // a배열 선언
+        for(let i=0; i<5; i++){
+            a[i] = prompt("정수를 입력해주세요");  //for 문을 이용해 a[0]에 입력받은 값을 넣고 a[1],a[2]...a[4]까지 값을 넣음
+        }
+
+        
+        document.write("입력된 수의 배열 <br>" + a +" <br>");
+        
+        document.write("역순으로 재정렬된 배열 <br>" + a.reverse());//a.reverse()는 a의 배열을 반대로 저장해줌. 
+    </script>
+</body>
+</html>

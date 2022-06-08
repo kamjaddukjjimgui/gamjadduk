@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function image(ff){ //이미지 파일을 정해주기 위한 함수.
+            switch(ff){
+                case 0:
+                    return "<img src=0.png>";
+                    break;
+                case 1:
+                    return "<img src=1.png>";
+                    break;
+                case 2:
+                    return "<img src=2.png>";
+                    break;
+            }
+        }
+        function randomInt(){ //0~2까지 랜덤값을 생성하는 함수
+            var z= Math.floor(Math.random()*3);
+            return z;
+        }
+        function change1(zz){ //1번째 숫자의 값과 이미지를 정해주는 함수
+            switch(zz){
+                case 1:
+                    a = randomInt();
+                    aa.innerHTML = image(a);
+                    change4();
+                    break;
+                case 2:
+                    b = randomInt();
+                    bb.innerHTML = image(b);
+                    change4();
+                    break;
+                case 3:
+                    c = randomInt();
+                    cc.innerHTML = image(c);
+                    flag =1;
+                    change4();
+                    break;
+            }
+        }
+        function change4(){ //succes와 fail을 출력하는 함수
+            if(flag==1){
+                if(a==b&b==c){
+                    dd.innerHTML = "succes(click here to do again)";
+                }
+                else{
+                    dd.innerHTML = "fail(click here to do again)";
+                }
+            }
+        }
+        function change5(){ //fail이나 succes를 누를 시 초기화 해주는 함수 
+            aa.innerHTML= "<img src=0.png>";
+            bb.innerHTML= "<img src=0.png>";
+            cc.innerHTML= "<img src=0.png>";
+            dd.innerHTML = "";
+            flag=0;
+        }
+    </script>
+</head>
+<body>
+    <h2>겜블링 게임</h4>
+    <p>각 숫자를 클릭하면 0에서 2사이의 난수로 바뀝니다.
+        모두 같은 수가 나오면 승리합니다.
+    </p>
+    <span id='park1' onclick='change1(1)'><img src='0.png'></span>
+    <span id='park2' onclick='change1(2)'><img src='0.png'></span>
+    <span id='park3' onclick='change1(3)'><img src='0.png'></span>
+    <p id='park4' onclick='change5()'></p>
+    <script>
+        var aa = document.getElementById("park1");
+        var bb = document.getElementById("park2");
+        var cc = document.getElementById("park3");
+        var dd = document.getElementById("park4");
+        var a=0;
+        var b=0;
+        var c=0;
+        var flag =0;
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        span{
+            font-size: 50px;
+        }
+        div{
+            border:3px solid pink; 
+            padding:5px;
+            width: 100px;
+            height: 70px;
+        }
+    </style>
+    <script>
+        var a=0;
+        var b=0;
+        var c=0;
+        let p;
+        function init(obj){
+            obj.innerHTML =obj;
+        }
+        function change1(){ //1번째 숫자의 값과 이미지를 정해주는 함수
+            a = Math.floor(Math.random()*3);
+            document.getElementById("aa").innerHTML =a;
+        }
+        function change2(){ //1번째 숫자의 값과 이미지를 정해주는 함수
+            b = Math.floor(Math.random()*3);
+            document.getElementById("bb").innerHTML =b;
+        }
+        function change3(){ 
+            c = Math.floor(Math.random()*3);
+            document.getElementById("cc").innerHTML =c;
+            if(a==b&b==c){
+                document.getElementById("park4").innerHTML = "succes(click here to do again)";
+            }
+            else{
+                document.getElementById("park4").innerHTML= "fail(click here to do again)";
+            }
+        }
+        function change5(){
+            document.getElementById("park4").innerHTML ="";
+            document.getElementById("aa").innerHTML =0;
+            document.getElementById("bb").innerHTML =0;
+            document.getElementById("cc").innerHTML =0;
+        }
+    </script>
+</head>
+<body>
+    <h2>겜블링 게임</h4>
+    <p>각 숫자를 클릭하면 0에서 2사이의 난수로 바뀝니다.
+        모두 같은 수가 나오면 승리합니다.
+    </p>
+    <div>
+        <span id="aa" onclick='init(this)'>0</span>
+        <span id="bb" onclick='change2()'>0</span>
+        <span id="cc" onclick='change3()'>0</span>
+    </div>
+    <p id='park4' onclick='change5()'></p>
+</body>
+</html>

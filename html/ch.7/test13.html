@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let book = new Object();
+        let bookArray=new Array;
+        let bookArray1 = new Array;
+        var kim = prompt("문자열 입력"); 
+        var park = kim.split(","); //"쉼표로 구분지어 split해서 park 배열 생성"
+        book.title =park[0];
+        book.author =park[1];
+        book.price =park[2]; //new object를 생성하고 park의 문자열을 삽입
+        
+        
+        document.write("book: "+book.title + "," + book.author +"," + book.price +"<br>"); //오브젝트를 출력
+        //bookArray1[i]=book.price; //높은 가격을 정하기 위해 가격만 따로 넣는 배열을 생성
+        //bookArray[i]=[book.title,book.author,book.price]; //비싼 책을 정하기 위해 object를 다시 배열로 변환함
+    </script>
+</body>
+</html>
